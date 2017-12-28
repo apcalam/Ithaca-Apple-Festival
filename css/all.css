@@ -1,0 +1,230 @@
+/*Styling shared across all devices: laptops, tablets, and phones*/
+
+/*I'm using sans-serif because it is easier to read than serif.*/
+body {
+  font-family: sans-serif;
+}
+
+/*The name of each page is in an h2 element. These are the biggest to indicate that
+it's a title and it's important information.
+Also, people people know where they are on the website.*/
+h2{
+  font-size: 25px;
+  text-align: center;
+}
+
+/*The size of all subtitles is slightly smaller than the titles so that people know they are subcategories under the page.
+Also it's easier to read and less distracting.*/
+h4 {
+  font-size: 20px;
+  text-align: center;
+}
+
+/*The size of the normal text is the smallest compared to the titles and subtitles to make reading easier
+and it makes more sense logically to the user.*/
+p, .list_intext {
+  font-size: 15px;
+}
+
+.center {
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+}
+
+/*Styles the table that has the schedule of performers. The table will be light grey with a thin
+black border around each box in the table to make it easier to read. */
+table {
+  background-color: #f2f2f2;
+  width: 100%;
+}
+th, td {
+  border: 1px solid black;
+  text-align: left;
+}
+
+/*Laptop Styling*/
+@media screen and (min-width: 1100px) {
+  body {
+      width: 1100px;
+      margin: 0px auto;
+  }
+
+  /*Styles the navigation. The navigation have a color of light turquoise and when your mouse
+  hovers over a link on the nav bar, the link will be a darker turquoise*/
+  .navul {
+      list-style-type: none;
+      background-color: rgba(16, 186, 209, 0.5);
+      overflow: hidden;
+  }
+  .navli {
+      float: left;
+      width: 150px;
+  }
+  .navli a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 15px 15px;
+      text-decoration: none;
+      text-transform: uppercase;
+  }
+  li a:hover {
+      background-color: rgb(16, 186, 209);
+  }
+
+  /*Styling to put 3 pictures and their captions in 1 row. Sets the width and floats the images and text underneath it.*/
+  .left_3row, .middle_3row {
+  float: left;
+  width: 300px;
+  padding-right: 75px;
+  }
+  .right_3row {
+  float: right;
+  width: 300px;
+  }
+
+  /*Styling to put 2 pictures and their captions in 1 row. Sets the width and floats the images and text underneath it.*/
+  .left_2row, .middle_2row {
+  float: left;
+  width: 450px;
+  padding-left: 30px;
+  padding-right: 30px;
+  }
+
+  /*Adds extra white space between different elements of the page. It makes things easier to read.*/
+  .banner, .container {
+  padding-bottom: 30px;
+  }
+
+  .banner_pic {
+    width: 1100px;
+    margin: auto;
+  }
+
+  .container {
+    padding: 10px 20px;
+    margin: auto;
+    margin-bottom: 10px;
+    overflow:auto;
+    border-style:hidden;
+  }
+
+  #map {
+    width: 1050px;
+    margin: auto;
+  }
+
+  /*Styles the table to include padding on each side of a cell on the table.*/
+  th, td {
+    padding: 10px;
+  }
+}
+
+/*Tablet Styling*/
+@media screen and (min-width: 701px) and (max-width: 1099px) {
+  body {
+      width: 700px;
+      margin: 0px auto;
+  }
+
+  /*Styles the navigation. The navigation have a color of light turquoise. Slightly smaller spacing than for laptops.*/
+  .navul {
+      list-style-type: none;
+      background-color: rgba(16, 186, 209, 0.5);
+      overflow: hidden;
+  }
+  .navli {
+      float: left;
+      width: 130px;
+  }
+  .navli a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 10px 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+  }
+
+  /*Styling to put 3 pictures and their captions in 1 row. Sets the width and floats the images and text underneath it.
+  The width is set to 200px rather than 300px (the size on the laptops) so that it fits onto the smaller screen.*/
+  .pics_3row {
+    width: 200px;
+  }
+  .left_3row, .middle_3row {
+  float: left;
+  width: 200px;
+  padding-right: 50px;
+  }
+  .right_3row {
+  float: right;
+  width: 200px;
+  }
+
+  /*Styling to put 2 pictures and their captions in 1 row. Sets the width and floats the images and text underneath it.
+  The width is set to 300px rather than 450px (the size on the laptops) so that it fits onto the smaller screen.*/
+  .pics_2row {
+    width:300px;
+  }
+  .left_2row, .middle_2row {
+  float: left;
+  width: 300px;
+  padding-left: 20px;
+  padding-right: 20px;
+  }
+
+  .banner_pic, #map {
+    margin: auto;
+    width: 100%;
+  }
+
+  /*Styles the table to include padding on each side of a cell on the table.*/
+  th, td {
+    padding: 10px;
+  }
+}
+
+/*Styling for phones*/
+@media screen and (max-width: 700px) {
+  /*Styles the navigation. The navigation have a color of light turquoise. Unlike laptop and tablet, it keeps
+  the navigation stacked up on top of each other rather than in one line. I also increase padding on the top
+  and the bottom so that it is easier to read the navigation.*/
+  .navul {
+      list-style-type: none;
+      background-color: rgba(16, 186, 209, 0.5);
+  }
+  .navli a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-right:15px;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-width: thin;
+  }
+
+  /*Images are centered and the relative width is set to 75% because the pictures look too big at 100%. It's too
+  overwhelming for such a small screen size.*/
+  img {
+    display: block;
+    margin: auto;
+    width: 75%;
+  }
+
+  /*The banner pictures at the top of each page and the map are set to 100% because they should be the center of
+  attention because they have important information. The other images are supplementary to the information.*/
+  .banner_pic, .map {
+    margin: auto;
+    width: 100%;
+  }
+
+  /*The text in each cell of the table has smaller text than on a laptop or tablet so that it fits to the screen.*/
+  th, td {
+    font-size: 11px;
+  }
+}
